@@ -1,0 +1,305 @@
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* HEADER con imagen real */
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 450px;
+  object-fit: cover;
+}
+
+/* Contenido sobre la imagen */
+.header-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo */
+.logo img {
+  width: 55px;
+  margin-bottom: 15px;
+}
+
+/* Menú */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+nav a {
+  color: black;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #555;
+}
+
+/* Botón */
+.buttons__cover {
+  display: flex;
+  justify-content: center;
+}
+
+.btn__register-cover {
+  padding: 14px 50px;
+  border: none;
+  background: #000;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 300ms, color 300ms;
+}
+
+.btn__register-cover:hover {
+  background: white;
+  color: #000;
+}
+
+/* Main */
+.contenedor {
+  padding: 60px 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.contenedor-sobre-nosotros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  gap: 20px;
+}
+
+.contenedor-sobre-nosotros img {
+  width: 48%;
+  height: auto;
+  object-fit: cover;
+}
+
+.sobre-nosotros .contenido-textos {
+  width: 48%;
+}
+
+.contenido-textos h3 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.contenido-textos h3 span {
+  background: #f7eb05;
+  color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-right: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.contenido-textos p {
+  padding-left: 15px;
+  font-weight: 300;
+  text-align: justify;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Portafolio */
+.portafolio {
+  background: #f2f2f2;
+  padding: 60px 0;
+}
+
+.galeria-port {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-evenly;
+}
+
+.imagen-port {
+  width: 24%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.imagen-port > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.imagen-port:hover > img {
+  transform: scale(1.1);
+}
+
+.hover-galeria {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  background: hsla(273, 91%, 27%, 0.7);
+  transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 10px;
+}
+
+.imagen-port:hover .hover-galeria {
+  transform: scale(1);
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contenedor-footer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.content-foo h4 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.content-foo p {
+  font-size: 1rem;
+}
+
+footer h2 {
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .hero-img {
+    max-height: 320px;
+  }
+
+  .contenedor-sobre-nosotros {
+    flex-direction: column;
+    height: auto;
+    padding: 0 20px;
+  }
+
+  .contenedor-sobre-nosotros img,
+  .sobre-nosotros .contenido-textos {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  .imagen-port {
+    width: 48%;
+    height: 180px;
+  }
+
+  .btn__register-cover {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-img {
+    max-height: 250px;
+  }
+
+  nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 16px;
+    padding: 6px 8px;
+  }
+
+  .imagen-port {
+    width: 100%;
+    height: 160px;
+  }
+
+  .contenedor {
+    padding: 20px 10px;
+  }
+
+  .contenido-textos p {
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .contenedor-sobre-nosotros {
+    padding: 10px;
+  }
+}
+
